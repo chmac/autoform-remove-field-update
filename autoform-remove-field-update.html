@@ -3,12 +3,16 @@
 </head>
 
 <body>
+<div class="container">
   <h1>Welcome to Meteor!</h1>
 
-  {{> hello}}
+  {{> form}}
+</div>
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name="form">
+  <h2>Insert</h2>
+  {{>quickForm id='nameInsert' collection='Names' type='insert'}}
+  <h2>Update</h2>
+  {{>quickForm id='nameUpdate' collection='Names' type='update' doc=name}}
 </template>
